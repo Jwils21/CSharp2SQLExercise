@@ -44,8 +44,8 @@ namespace CSharp2SQL {
 			}
 			System.Diagnostics.Debug.WriteLine("Connection Opened");
 
-			string sql = "Update [user] Set (Username=@Username, Password=@Password, Firstname=@Firstname, Lastname=@Lastname," +
-				" Phone=@Phone, Email=@Email, IsReviewer=@IsReviewer, IsAdmin=@IsAdmin, Id=@Id) Where (Id = @Id);";
+			string sql = "Update [user] Set Username=@Username, Password=@Password, Firstname=@Firstname, Lastname=@Lastname," +
+				" Phone=@Phone, Email=@Email, IsReviewer=@IsReviewer, IsAdmin=@IsAdmin Where Id = @Id;";
 
 			SqlCommand cmd = new SqlCommand(sql, conn);
 			cmd.Parameters.Add(new SqlParameter("@Id", user.Id));
